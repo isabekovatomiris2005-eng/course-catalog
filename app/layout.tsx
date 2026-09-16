@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen bg-gray-50 text-gray-900">
         <header className="border-b bg-white">
-          <nav className="mx-auto flex max-w-5xl gap-6 p-4">
+          <nav className="mx-auto flex max-w-5xl justify-center gap-6 p-4">
             <Link href="/" className="font-medium hover:text-blue-600">
               Home
             </Link>

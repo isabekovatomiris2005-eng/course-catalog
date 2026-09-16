@@ -8,8 +8,7 @@ export default function AboutPage() {
         Client Components, and TypeScript in the Next.js App Router.
       </p>
       <p className="text-gray-700">
-        Data currently comes from a mocked in-memory source. A real backend
-        will be added later in the course.
+        Data currently comes from a mocked in-memory source.
       </p>
     </main>
   );
