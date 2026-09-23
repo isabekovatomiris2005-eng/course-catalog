@@ -20,10 +20,10 @@ export default async function CoursePage({ params }: CoursePageProps) {
   }
 
   return (
-    <main className="p-8">
-      <h1 className="text-3xl font-bold mb-2">{course.title}</h1>
-      <p className="text-gray-600 mb-4">{course.description}</p>
-      <p className="mb-6 text-sm text-gray-500">
+    <main className="p-8 max-w-3xl mx-auto">
+      <h1 className="text-3xl font-bold mb-2 dark:text-white">{course.title}</h1>
+      <p className="text-gray-600 dark:text-gray-300 mb-4">{course.description}</p>
+      <p className="mb-6 text-sm text-gray-500 dark:text-gray-400">
         {course.credits} credits · {course.isElective ? "Elective" : "Core"}
       </p>
       <LikeButton initialLikes={course.likes} />

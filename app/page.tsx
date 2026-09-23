@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="p-8">
-      <h1 className="text-3xl font-bold mb-4">Course Catalog</h1>
-      <p className="mb-6 text-gray-700">
+    <main className="p-8 max-w-3xl mx-auto">
+      <h1 className="text-3xl font-bold mb-4 dark:text-white">Course Catalog</h1>
+      <p className="mb-6 text-gray-700 dark:text-gray-300">
         Welcome! Browse the courses offered this semester.
       </p>
       <Link
