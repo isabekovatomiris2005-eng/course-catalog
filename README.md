@@ -52,3 +52,33 @@ The build output should show `/courses/[id]` prerendered as **SSG** — one stat
 ## Notes
 The mock data source is temporary.
 Likes are stored in local component state only and reset on page reload by design.
+
+
+
+## Lab 2: Styling with Tailwind CSS and shadcn/ui
+
+In this lab, I styled the course catalog using Tailwind CSS and shadcn/ui. The UI was refactored to use pre-built accessible components, made fully responsive across devices, and enhanced with a system-based dark mode.
+
+### What's implemented
+
+**shadcn/ui integration**:
+- Installed and configured shadcn/ui (`components.json`, `lib/utils.ts`)
+- Added `Button` and `Card` components to `components/ui/`
+
+**CourseCard refactoring**:
+- Replaced plain HTML tags with shadcn/ui components: `Card`, `CardHeader`, `CardTitle`, `CardContent`, and `Button`
+- Added hover effects (`hover:shadow-md hover:border-blue-300 transition`) for better interactivity
+- Kept `CourseCard` as a Server Component (no `'use client'` directive)
+
+**Responsive Grid**:
+- Updated the course list in `app/courses/page.tsx` with a mobile-first grid: `grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4`
+- 1 column on phones, 2 on tablets, 3 on desktops, 4 on very wide monitors
+
+**Navigation**:
+- Created `components/NavBar.tsx` as a Client Component to highlight the active page using the `usePathname()` hook
+- Styled links with hover effects (`hover:bg-slate-100`), padding, and visual separation (`border-b`)
+
+**Bonus: Dark Mode**:
+- Added system-based dark mode support using Tailwind's `dark:` prefix
+- Updated `CourseCard`, `NavBar`, and all pages (`/`, `/about`, `/courses/[id]`) for proper contrast and readability in dark theme
+- Improved hover effects specifically for dark mode (`dark:hover:bg-slate-800`, `dark:hover:border-blue-500`, `dark:hover:shadow-blue-500/20`)
